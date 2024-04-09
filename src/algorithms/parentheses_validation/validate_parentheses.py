@@ -25,6 +25,7 @@ def parentheses_valid(string: str) -> bool:
             elif wildcards > 0:
                 wildcards -= 1
             else:
+                # hit a close with no open
                 return False
         elif c == "*":
             wildcards += 1

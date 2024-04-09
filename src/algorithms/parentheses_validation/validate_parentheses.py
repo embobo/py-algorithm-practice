@@ -13,4 +13,20 @@ Left parenthesis '(' must go before the corresponding right parenthesis ')'.
 """
 
 def parentheses_valid(string: str) -> bool:
-    pass
+    count = 0
+    wildcards = 0
+
+    for c in string:
+        if c == "(":
+            count += 1
+        elif c == ")":
+            if count > 0:
+                count -= 1
+            elif wildcards > 0:
+                wildcards -= 1
+            else:
+                return False
+        elif c == "*":
+            wildcards += 1
+
+    return count == 0 or (wildcards >= count)

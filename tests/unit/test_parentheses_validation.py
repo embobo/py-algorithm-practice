@@ -1,6 +1,6 @@
 import pytest
 
-from src.algorithms.parentheses_validation.validate_parentheses import parentheses_valid
+from src.algorithms.validate_parentheses import parentheses_valid
 
 
 @pytest.mark.parametrize(

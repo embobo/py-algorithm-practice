@@ -5,7 +5,7 @@ import pytest
 from src.algorithms.most_water import max_area
 
 
-class TestLongestPalindromicSubsring:
+class TestMostWater:
     @pytest.mark.parametrize(
         "input, expected",
         [
